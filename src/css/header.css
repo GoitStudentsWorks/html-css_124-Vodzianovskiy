@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.container {
+  padding: 18px 16px;
+}
+
 .menu-nav {
   display: flex;
   align-items: center;
