@@ -15,6 +15,10 @@
     transform: translateX(100%);
 }
 
+.mobile-menu-logo-btn {
+    padding: 18px 0;
+}
+
 .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
@@ -56,11 +60,6 @@
     fill: currentColor;
 }
 
-.logo {
-    display: block;
-    padding: 18px 0;
-}
-
 
 .mobile-menu-link {
     display: block;
@@ -68,7 +67,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #0b0803;
+    font-family: var(--font-family);
+    color: var(--color-scheme-1-text);
 
     transition: opacity 300ms ease-in-out;
 }
@@ -80,4 +80,8 @@
 
 .mobile-menu-list .mobile-menu-nav-item:not(:last-child) {
     margin-bottom: 32px;
+}
+
+.mobile-menu-wrap {
+    padding: 18px 0;
 }
