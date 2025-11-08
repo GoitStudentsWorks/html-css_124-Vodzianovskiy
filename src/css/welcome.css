@@ -105,8 +105,14 @@
     width: 181px;
   }
 }
-.welcome-btn:hover,
-.welcome-btn:focus {
+
+.button:hover {
+  .span-button {
+    color: var(--color-neutral-darkest);
+  }
+  .welcome-icon {
+    fill: var(--color-neutral-darkest);
+  }
   box-shadow: 0 1px 2px 0 var(--opacity-neutral-darkest-5),
     inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px var(--opacity-neutral-darkest-15),
@@ -123,10 +129,27 @@
   position: relative;
   top: 1px;
   margin-left: 8px;
-  transition: fill 0.3s ease, transform 0.2s ease;
 }
 .welcome-image {
   border-radius: 40px;
   width: 100%;
   height: auto;
+}
+
+/* Для кнопки "Find location": иконке даём анимацию */
+.welcome-btn .welcome-icon {
+  margin-left: 12px;
+  animation: moveY 1.2s infinite alternate cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Ключевые кадры для движения вверх-вниз */
+@keyframes moveY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(
+      -6px
+    ); /* вверх (можно -6px/+6px если нравится мягче) */
+  }
 }
