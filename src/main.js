@@ -1,28 +1,37 @@
-(() => {
+document.addEventListener('DOMContentLoaded', function () {
   const refs = {
-    openModalBtn: document.querySelector('.burger-buttom'), // Добавил селектор для бургера
+    openModalBtn: document.querySelector('.burger-buttom'),
     closeModalBtn: document.querySelector('[data-menu-close]'),
     modal: document.querySelector('[data-menu]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  if (refs.openModalBtn) {
+    refs.openModalBtn.addEventListener('click', toggleModal);
+  }
+  if (refs.closeModalBtn) {
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  }
+  if (refs.modal) {
+    refs.modal.addEventListener('click', e => {
+      if (e.target === refs.modal) {
+        toggleModal();
+      }
+    });
+  }
 
-  // Добавил закрытие по клику вне модалки
-  refs.modal.addEventListener('click', e => {
-    if (e.target === refs.modal) {
-      toggleModal();
-    }
-  });
-
-  // Добавил закрытие по Escape для удобства
   document.addEventListener('keydown', e => {
-    if (e.code === 'Escape' && refs.modal.classList.contains('is-open')) {
+    if (
+      e.code === 'Escape' &&
+      refs.modal &&
+      refs.modal.classList.contains('is-open')
+    ) {
       toggleModal();
     }
   });
 
   function toggleModal() {
-    refs.modal.classList.toggle('is-open');
+    if (refs.modal) {
+      refs.modal.classList.toggle('is-open');
+    }
   }
-})();
+});
