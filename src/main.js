@@ -1,18 +1,28 @@
 (() => {
   const refs = {
-    // Додати атрибут data-modal-open на кнопку відкриття
-    openModalBtn: document.querySelector('[data-menu-open]'),
-    // Додати атрибут data-modal-close на кнопку закриття
+    openModalBtn: document.querySelector('.burger-buttom'), // Добавил селектор для бургера
     closeModalBtn: document.querySelector('[data-menu-close]'),
-    // Додати атрибут data-modal на бекдроп модалки
     modal: document.querySelector('[data-menu]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
+  // Добавил закрытие по клику вне модалки
+  refs.modal.addEventListener('click', e => {
+    if (e.target === refs.modal) {
+      toggleModal();
+    }
+  });
+
+  // Добавил закрытие по Escape для удобства
+  document.addEventListener('keydown', e => {
+    if (e.code === 'Escape' && refs.modal.classList.contains('is-open')) {
+      toggleModal();
+    }
+  });
+
   function toggleModal() {
-    // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
     refs.modal.classList.toggle('is-open');
   }
 })();
