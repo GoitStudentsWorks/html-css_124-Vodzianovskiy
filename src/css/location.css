@@ -1,12 +1,20 @@
-/* font-family: var(--second-family)
-  --font-family: 'Quicksand',
-  sans-serif;
-  --second-family: 'Aboreto',
-  sans-serif; */
-.loading-container {
-padding-top: 64px;
-padding-bottom: 64px;
 
+.location {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 64px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+    .location {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .location {
+        max-width: 1440px;
+    }
 }
 
 
@@ -15,7 +23,7 @@ padding-bottom: 64px;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-    color: #0b0803;
+    color: var(--color-neutral-darkest);
     margin-bottom: 16px;
 }
 
@@ -25,8 +33,14 @@ padding-bottom: 64px;
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    color: #0b0803;
+    color: var(--color-neutral-darkest);
     margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 1440px) {
+    .location-header {
+    font-size: 48px;
+    }
 }
 
 .location-text {
@@ -34,7 +48,7 @@ padding-bottom: 64px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
-    color: #0b0803;
+    color: var(--color-neutral-darkest);
     margin-bottom: 40px;
 }
 
@@ -42,10 +56,29 @@ padding-bottom: 64px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
+    margin-bottom: 32px;
 }
 
-.location-contacts-item {
+@media only screen and (min-width: 768px) {
+    .location-contacts {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    }
 
+        .location-contacts-item {
+            width: 208px;
+        }
+}
+
+@media only screen and (min-width: 1440px) {
+    .location-contacts {
+        flex-direction: column;
+    }
+
+         .location-contacts-item {
+             width: 419px;
+         }
 }
 
 .location-item-icon {
@@ -58,7 +91,7 @@ padding-bottom: 64px;
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: -0.01em;
-    color: #0b0803;
+    color: var(--color-neutral-darkest);
     margin-bottom: 8px;
 }
 
@@ -69,7 +102,14 @@ padding-bottom: 64px;
     line-height: 1.5;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #0b0803;
+    color: var(--color-neutral-darkest);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.location-contacts-link:hover,
+.location-contacts-link:focus {
+    color: var(--opacity-neutral-darkest-15);
+    fill: var(--opacity-neutral-darkest-15);
 }
 
 .location-address {
@@ -77,7 +117,7 @@ padding-bottom: 64px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #0b0803;
+    color: var(--color-neutral-darkest);
     margin-bottom: 16px;
 }
 
@@ -86,7 +126,15 @@ padding-bottom: 64px;
     flex-direction: row;
     align-items: center;
     gap: 8px;
-    margin-bottom: 32px;
+    color: var(--color-neutral-darkest);
+    fill: var(--color-neutral-darkest);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.location-get-directions-link:hover,
+.location-get-directions-link:focus {
+    color: var(--opacity-neutral-darkest-15);
+    fill: var(--opacity-neutral-darkest-15);
 }
 
 .location-get-directions-text {
@@ -94,16 +142,44 @@ padding-bottom: 64px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: #0b0803;
 }
-
 
 .map-container {
-    display: block;
-    overflow: hidden;
+    position: relative;
     width: 288px;
     height: 307px;
+    overflow: hidden;
     border-radius: 40px;
-    transform: translateZ(0px);
+    display: flex;
+    justify-self: center;
 }
 
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .map-container {
+        width: 704px;
+        height: 377px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .map-container {
+            width: 869px;
+            height: 697px;
+        }
+}
+
+@media only screen and (min-width: 1440px) {
+    .location-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
