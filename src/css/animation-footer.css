@@ -1,0 +1,10 @@
+.icon-vector {
+  transition: transform 0.16s cubic-bezier(0.22, 0.68, 0.43, 1.01);
+  display: inline-block;
+}
+
+.icon-vector:hover,
+.icon-vector:focus {
+  transform: scale(1.55);
+  z-index: 3;
+}

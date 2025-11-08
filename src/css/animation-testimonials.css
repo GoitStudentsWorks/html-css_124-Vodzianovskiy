@@ -1,0 +1,15 @@
+.observation {
+  transition: transform 0.22s cubic-bezier(0.22, 0.68, 0.43, 1.01),
+    box-shadow 0.22s;
+  will-change: transform, box-shadow;
+  transform: none;
+  backface-visibility: hidden;
+}
+
+.observation:hover,
+.observation:focus {
+  transform: scale(1.03) translateY(-7px);
+  box-shadow: 0 14px 35px -8px var(--color-scheme-2-background, #6a5af9cc),
+    0 2px 4px var(--color-scheme-2-background, #0002);
+  z-index: 10;
+}

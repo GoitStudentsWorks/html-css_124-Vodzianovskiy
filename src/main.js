@@ -35,3 +35,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+// при загрузке
+
+function showOnScroll(selector) {
+  document.querySelectorAll(selector).forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', () => {
+  showOnScroll('.hero-title, .hero-text, .hero-button');
+});
+window.addEventListener('load', () => {
+  showOnScroll('.hero-title, .hero-text, .hero-button');
+});
+
+// фото experience
