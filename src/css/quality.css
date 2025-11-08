@@ -2,6 +2,25 @@
     padding: 64px 0;
 }
 
+.section-heading {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--color-scheme-1-text);
+    font-family: var(--second-family);
+}
+
+.tagline {
+    font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--color-scheme-1-text);
+}
+
 .tagline-quality {
     margin-bottom: 16px;
 }
@@ -35,6 +54,8 @@ margin-bottom: 32px;
 }
 
 .quality-heading-text {
+font-family: var(--font-family);
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
@@ -118,17 +139,22 @@ margin-bottom: 32px;
 }
 
 .quality-list-heading {
-        font-size: 20px;
-        line-height: 1.5;
-        text-align: center;
-        color: var(--color-scheme-1-text);
-        margin-bottom: 8px;
+        font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.5;
+            text-align: center;
+            color: var(--color-scheme-1-text);
+            margin-bottom: 8px;
 }
 
 .quality-list-text {
-        line-height: 1.5;
-        text-align: center;
-        color: var(--color-scheme-1-text);
+        font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            color: var(--color-scheme-1-text);
 }
 
 

@@ -50,19 +50,3 @@ body {
   background-color: var(--color-coffee-lighter);
 }
 
-.section-heading {
-    font-size: 36px;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: var(--color-scheme-1-text);
-    font-family: var(--second-family);
-}
-
-.tagline {
-  font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    color: var(--color-scheme-1-text);
-}
