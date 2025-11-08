@@ -136,20 +136,16 @@
   height: auto;
 }
 
-/* Для кнопки "Find location": иконке даём анимацию */
 .welcome-btn .welcome-icon {
   margin-left: 12px;
   animation: moveY 1.2s infinite alternate cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* Ключевые кадры для движения вверх-вниз */
 @keyframes moveY {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(
-      -6px
-    ); /* вверх (можно -6px/+6px если нравится мягче) */
+    transform: translateY(-6px);
   }
 }
