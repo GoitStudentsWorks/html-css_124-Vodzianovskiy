@@ -3,6 +3,12 @@
   sans-serif;
   --second-family: 'Aboreto',
   sans-serif; */
+.loading-container {
+padding-top: 64px;
+padding-bottom: 64px;
+
+}
+
 
 .location-dir {
     font-family: var(--font-family);
@@ -10,6 +16,7 @@
     font-size: 16px;
     line-height: 1.5;
     color: #0b0803;
+    margin-bottom: 16px;
 }
 
 .location-header {
@@ -19,6 +26,7 @@
     line-height: 1.2;
     letter-spacing: -0.01em;
     color: #0b0803;
+    margin-bottom: 24px;
 }
 
 .location-text {
@@ -27,10 +35,13 @@
     font-size: 18px;
     line-height: 1.5;
     color: #0b0803;
+    margin-bottom: 40px;
 }
 
 .location-contacts {
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
 }
 
 .location-contacts-item {
@@ -38,7 +49,7 @@
 }
 
 .location-item-icon {
-    
+    margin-bottom: 16px;
 }
 
 .location-contacts-header {
@@ -48,6 +59,7 @@
     line-height: 1.4;
     letter-spacing: -0.01em;
     color: #0b0803;
+    margin-bottom: 8px;
 }
 
 .location-contacts-link {
@@ -66,9 +78,18 @@
     font-size: 16px;
     line-height: 1.5;
     color: #0b0803;
+    margin-bottom: 16px;
 }
 
-.location-map-text {
+.location-get-directions-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.location-get-directions-text {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -76,9 +97,13 @@
     color: #0b0803;
 }
 
+
 .map-container {
+    display: block;
+    overflow: hidden;
+    width: 288px;
+    height: 307px;
     border-radius: 40px;
-        width: 288px;
-        height: 307px;
+    transform: translateZ(0px);
 }
 
