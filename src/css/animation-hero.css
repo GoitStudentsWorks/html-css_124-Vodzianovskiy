@@ -1,26 +1,27 @@
-/* Только анимация появления для hero-заголовка, текста и кнопки */
-
 .hero-title,
 .hero-text,
 .hero-button {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.7s cubic-bezier(0.44, 0.14, 0.34, 1.23),
-    transform 0.7s cubic-bezier(0.44, 0.14, 0.34, 1.23);
+  animation-fill-mode: both;
 }
 
-.hero-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.12s;
+.hero.show .hero-title {
+  animation: hero-fade-in 0.7s cubic-bezier(0.44, 0.14, 0.34, 1.23) 0.05s
+    forwards;
 }
-.hero-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.34s;
+.hero.show .hero-text {
+  animation: hero-fade-in 0.7s cubic-bezier(0.44, 0.14, 0.34, 1.23) 0.22s
+    forwards;
 }
-.hero-button.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s;
+.hero.show .hero-button {
+  animation: hero-fade-in 0.7s cubic-bezier(0.44, 0.14, 0.34, 1.23) 0.35s
+    forwards;
+}
+
+@keyframes hero-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
