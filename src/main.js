@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+ocument.addEventListener('DOMContentLoaded', async () => {
   const [mobileMenuModule, experienceAnimModule, modalModule] =
     await Promise.all([
       import('/js/mobile-menu.js'),
